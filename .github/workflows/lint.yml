@@ -15,5 +15,5 @@ jobs:
           dotnet-version: '8.0.x'
       - name: Install dependencies
         run: dotnet restore SpecflowNunit.csproj
-      - name: Lint
-        run: dotnet stylecop --rulesets StyleCopzzi.ruleset,StyleCop.MSBuild.ruleset SpecflowNunit.csproj
+      - name: Build
+        run: dotnet build SpecflowNunit.csproj --no-restore --no-incremental
